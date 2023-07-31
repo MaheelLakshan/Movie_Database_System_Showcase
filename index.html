@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="Images/title_icon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>In Search Of a Movie</title>
+</head>
+
+<body>
+  <!--search container-->
+  <div class="container">
+    <div class="row" id="cover">
+      <img src="Images/Movies.png" class="image-fluid" id="Image-cover" alt="cover_Image">
+    </div>
+    <br>
+    <div class="row justify-content-around">
+      <div class="col-lg-8 col-md-10 col-sm-12 mb-3"><input class="form-control" placeholder="Enter the Movie Name you are Searching !!" type="text" id="string"></div>        
+      <div class="col-lg-3 col-md-10 col-sm-12 mb-3"><button type="button" class="form-control btn-primary" id="btn">Search</button></div>
+    </div>
+    <br>
+    <!--Results Row-->
+    <div class="row">
+      <div id="movie_list" class="row py-4"></div>
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="movie_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content modal_card">
+        <div class="modal-header modal_card">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="main_card">
+          <div class="card_left">
+            <div class="card_datails">
+              <h1 id='modal_header'></h1>
+              <div class="card_cat">
+                <p id="rated" class="PG"></p>
+                <p id="year" class="year"></p>
+                <p id="genre" class="genre"></p>
+                <p id="run_time" class="time"></p>
+              </div>
+              <p id="disc" class="disc"></p>
+              <div class="card_cat">
+                <p> BOX-OFFICE : <span id="box_office"></span></p>
+                <p> COUNTRY : <span id="country"></span></p>
+                <p> RELEASED DATE : <span id="released_date"></span></p>
+              </div>
+              <div class="card_cat">
+                <p> WRITERS : <span id="writer"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card_right">
+            <div class="img_container">
+              <img id="modal_image" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer modal_card">
+          <div class="card_cat">
+            <p> IMDB RATING : <span id="imdb_rating"></span></p>
+            <p> VOTES : <span id="imdb_votes"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</html>
